@@ -1,0 +1,7 @@
+pico_add_subdirectory(alyx_adc)
+pico_add_subdirectory(alyx_gpio)
+pico_add_subdirectory(alyx_i2c)
+pico_add_subdirectory(alyx_pwm)
+pico_add_subdirectory(alyx_time)
+pico_add_subdirectory(alyx_temp)
+pico_add_subdirectory(alyx_uart)
