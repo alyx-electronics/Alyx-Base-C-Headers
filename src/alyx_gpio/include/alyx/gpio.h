@@ -37,6 +37,23 @@ uint alyx_get_gpio_direction(uint gpio) {
 }
 
 //--------------------------------------------------
+// GPIO Pull related functions
+//--------------------------------------------------
+
+void alyx_set_gpio_pull(uint gpio, bool up) {
+    if (up) {
+        gpio_pull_up(gpio);
+    }
+    else {
+        gpio_pull_down(gpio);
+    }
+}
+
+void alyx_unset_gpio_pull(uint gpio) {
+    gpio_disable_pulls(gpio);
+}
+
+//--------------------------------------------------
 // GPIO Value related functions
 //--------------------------------------------------
 void alyx_set_gpio_value(uint gpio, bool value) {
