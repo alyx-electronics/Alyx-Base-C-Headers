@@ -1,5 +1,3 @@
-# alyx_adc
-
 ## Usage
 To use the `alyx_adc` header use:
 ```c
@@ -9,20 +7,19 @@ To use the `alyx_adc` header use:
 ## Defines
 
 ### `ADCVREF`
-Define this value when your board does not have the standard ADC Reference Voltage of 3.3V.  
-This might be the case when you are using a Alyx Base V2 which has the following value.
-
-```c
-#define ADCVREF 4.1f
-```
+This defines the `ADCVREF` to be `3.3f` meaning 3.3V.
 
 ## Functions
 
-### `void alyx_init_adc()`
-This function initializes the ADC.
+### Initialization of the ADC
 
-### `uint16_t alyx_get_adc_value(uint gpio)`
-This function returns the value of the given GPIO Pin.
+#### `void alyx_init_adc()`
+This function initializes the ADC hardware.
 
-### `float alyx_get_adc_voltage(uint gpio)`
-This function returns the voltage of the given GPIO Pin in Volt.
+### ADC Values
+
+#### `uint16_t alyx_get_adc_value(uint gpio)`
+This function initializes the given gpio as an analog input. It reads from the input and returns its value.
+
+#### `float alyx_get_adv_voltage(uint gpio)`
+This function initializes the given gpio as an analog input. It reads from the input, calculates the voltage and returns it. 
