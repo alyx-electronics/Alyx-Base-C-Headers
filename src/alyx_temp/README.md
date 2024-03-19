@@ -1,5 +1,3 @@
-# alyx_temp
-
 ## Usage
 To use the `alyx_temp` header use:
 ```c
@@ -9,20 +7,19 @@ To use the `alyx_temp` header use:
 ## Defines
 
 ### `ADCVREF`
-Define this value when your board does not have the standard ADC Reference Voltage of 3.3V.  
-This might be the case when you are using a Alyx Base V2 which has the following value.
-
-```c
-#define ADCVREF 4.1f
-```
+This defines the `ADCVREF` to be `3.3f` meaning 3.3V.
 
 ## Functions
 
-### `void alyx_init_temp()`
+### Initialization of the Temperature Sensor
+
+#### `void alyx_init_temp()`
 This function initializes the temperature sensor.
 
-### `uint16_t alyx_get_temp_value()`
-This function returns the value of the temperature sensor.
+### Temperature Values
 
-### `float alyx_get_temp_celsius()`
-This function returns the temperature of the temperature sensor in degrees celsius.
+#### `uint16_t alyx_get_temp_value()`
+This function selects the sensor as an analog input, reads it and returns its value.
+
+#### `float alyx_get_temp_celsius()`
+This function selects the sensor as an analog input, reads it, calculates the celsius value and returns it. 
