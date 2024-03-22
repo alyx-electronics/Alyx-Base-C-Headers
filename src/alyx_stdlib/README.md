@@ -13,5 +13,5 @@ To use the `alyx_stdlib` header use:
 #### `void alyx_init_serial()`
 This function initializes serial over UART and USB.
 
-#### `unsigned char* alyx_scanf()`
+#### `void alyx_scanf(unsigned char buffer[85])`
 This function reads from the serial stdin and returns the string.
