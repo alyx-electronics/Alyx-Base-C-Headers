@@ -11,6 +11,7 @@
  */
 #include "pico/stdlib.h"
 #include "os.h"
+#include "os_lock_core_v1.1.h"
 
 extern piccolo_os_internals_t piccolo_ctx;
 
