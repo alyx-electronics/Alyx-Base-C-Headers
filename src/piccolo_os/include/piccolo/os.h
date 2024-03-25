@@ -6,6 +6,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+#include <stdio.h>
+#include <stdbool.h>
+
 #ifndef PICCOLO_OS_H
 #define PICCOLO_OS_H
 
